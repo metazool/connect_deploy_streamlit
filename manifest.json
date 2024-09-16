@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "locale": "en_GB.UTF-8",
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "streamlit_app"
+  },
+  "python": {
+    "version": "3.12.2",
+    "package_manager": {
+      "name": "pip",
+      "version": "24.0",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "6cb06732ed729d9772ab50949657de8d"
+    },
+    ".streamlit/config.toml": {
+      "checksum": "cdfefe0c6fa18e0fce71642b89801711"
+    },
+    "LICENSE": {
+      "checksum": "1ebbd3e34237af26da5dc08a4e440464"
+    },
+    "README.md": {
+      "checksum": "7f75a11e2aecbbc373a367cb56f545bb"
+    },
+    "streamlit_app.py": {
+      "checksum": "7b2188f03f335ffb75f5561528961d7c"
+    }
+  }
+}
