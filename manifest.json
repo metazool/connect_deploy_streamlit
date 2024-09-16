@@ -6,16 +6,19 @@
     "entrypoint": "streamlit_app"
   },
   "python": {
-    "version": "3.12.2",
+    "version": "3.9.18",
     "package_manager": {
       "name": "pip",
-      "version": "24.0",
+      "version": "21.2.3",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
       "checksum": "6cb06732ed729d9772ab50949657de8d"
+    },
+    ".api_key": {
+      "checksum": "cf19ca4eb4bdd1c6768570d33ff162b8"
     },
     ".streamlit/config.toml": {
       "checksum": "cdfefe0c6fa18e0fce71642b89801711"
@@ -24,7 +27,7 @@
       "checksum": "1ebbd3e34237af26da5dc08a4e440464"
     },
     "README.md": {
-      "checksum": "7f75a11e2aecbbc373a367cb56f545bb"
+      "checksum": "0d95424d02e9ac1dbfed250627c6c5ec"
     },
     "streamlit_app.py": {
       "checksum": "7b2188f03f335ffb75f5561528961d7c"

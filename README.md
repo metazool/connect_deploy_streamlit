@@ -13,7 +13,7 @@ Question here is about how we store credentials for data storage?
 
 ## Steps
 
-Use `rsconnect` to create a manifest, commit it back to the repo. This adds everything, so we could happily point the manifest at a subdirectory rather than creating a UI project
+Use `rsconnect` to create a manifest, commit it back to the repo. This adds everything, so we could happily point the manifest at a subdirectory rather than creating a UI project: "first make the directory your working directory. Then call writeManifest."
 
 ```
 python -m venv ~/streamlit_env 
@@ -23,3 +23,23 @@ pip install rsconnect
 rsconnect write-manifest streamlit ./
 git add manifest.json
 ```
+
+## Glitches 
+
+First attempt yields us `Cannot find compatible environment: no compatible Local environment with Python version 3.12.2`.
+
+There's an API endpoint which should tell us which pythons are available, it needs an API key which takes a few clicks in the Connect UI plus a capture solve.
+
+```
+API_KEY="your api key"
+
+curl --silent --show-error -L --max-redirs 0 --fail \
+    -X GET \
+    -H "Authorization: Key ${API_KEY}" \
+    "https://connect.example.com/__api__/v1/server_settings/python"
+```
+
+This shows we've only got 3.9.6 available, and becomes a future support request; for now let's downgrade.
+Option to tweak the version in `manifest.json`, better to create a matching python environment locally (our default system python on these locked down VMs is 3.9.18...)
+
+`rsconnect write-manifest streamlit ./ --overwrite`
