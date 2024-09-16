@@ -43,3 +43,14 @@ This shows we've only got 3.9.6 available, and becomes a future support request;
 Option to tweak the version in `manifest.json`, better to create a matching python environment locally (our default system python on these locked down VMs is 3.9.18...)
 
 `rsconnect write-manifest streamlit ./ --overwrite`
+
+It's happy with the micro version difference ("republish" by scrolling down the `Info` tab and "Update now").#
+
+Switch "Sharing" to "all users - login required" on the `Access` tab - this is as open as we can go
+
+There's a `Vars` tab associated with the deployment, this looks like our best bet for keeping object store API keys in.
+
+Deployment _appears_ successful but all we see at the endpoint is a pulsing loading page, and it looks like reading the logs requires a level of access that we don't yet have
+
+
+
